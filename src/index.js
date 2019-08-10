@@ -1,11 +1,22 @@
-const { ApolloServer } = require("apollo-server");
-const typeDefs = require("./schema");
+const { ApolloServer } = require('apollo-server');
+const typeDefs = require('./schema');
+
+const { createStore } = require('./utils');
+
+const LaunchAPI = require('./datasources/launch');
+const UserAPI = require('./datasources/user');
+
+const store = createStore();
 
 const server = new ApolloServer({
   typeDefs,
   engine: {
-    apiKey: "service:kinglarce-8458:lgJfx-yhUzvkEzlMvIvLAw"
-  }
+    apiKey: 'service:kinglarce-8458:lgJfx-yhUzvkEzlMvIvLAw',
+  },
+  dataSources: () => ({
+    launchAPI: new LaunchAPI(),
+    userAPI: new UserAPI({ store }),
+  }),
 });
 
 server.listen().then(({ url }) => {
