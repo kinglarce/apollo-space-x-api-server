@@ -16,7 +16,7 @@ An application consuming the Space-X API with Apollo Server & SQLite.
 * Configure your own [apollo.config.js](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo) 
 * `npm install`
 * `npm start`
-* visit `http://localhost:3000`
+* visit `http://localhost:4000`
 
 ## Related Links
 * [Cheatsheets for Scalar Types](https://devhints.io/graphql#schema)
