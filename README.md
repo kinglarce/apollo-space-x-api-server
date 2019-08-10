@@ -18,3 +18,7 @@ An application consuming the Space-X API with Apollo Server & SQLite.
 * `npm start`
 * visit `http://localhost:3000`
 
+# Related Links
+* [Cheatsheets for Scalar Types](https://devhints.io/graphql#schema)
+* [Apollo VS Code Config](https://www.apollographql.com/docs/references/apollo-config/)
+* [GraphQL Playground Config](https://www.apollographql.com/docs/apollo-server/features/graphql-playground/)
